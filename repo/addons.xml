@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+  <addon id="plugin.video.gdrive" version="3.0.2" name="gDrive" provider-name="JDRIVO">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.urllib3" version="2.2.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+      <provides>video programs</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>A Google Drive Video Add-On</summary>
+      <description>Streams videos from Google Drive. gDrive isn't affiliated with Google.</description>
+      <platform>all</platform>
+      <assets>
+        <icon>resources/media/icon.png</icon>
+        <fanart>resources/media/fanart.jpg</fanart>
+      </assets>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="login">
+    </extension>
+  </addon>
+</addons>
